@@ -1,9 +1,26 @@
 // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
 
+use tauri::WebviewWindowBuilder;
+
 // Floating window function built in Rust
 #[tauri::command]
-fn floatingWindow(app: AppHandle)
-
+fn floatingWindow(app: AppHandle) -> tauri::Result<()>{
+    match app.webview_windows().get("floating"){
+        None =>{
+            WebviewWindowBuilder::new($app, "floating", tauri::WindowUrl::App("index.html".into()))
+                .alwats_on_top(true)
+                .decorations(false)
+                .inner_size(400.0, 400.0)
+                .position(0.0, 0.0)
+                .build()?;
+        }
+        Some(window) => {
+            window.close()?;
+        }
+    }
+    Ok(())
+}
+ 
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
