@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Tauri v2 + React 19 + TypeScript + Vite desktop app. Purpose: spawn/manage multiple OS windows (currently a single "floating" always-on-top, undecorated window toggled from the frontend).
 
+Product vision (per README): lets users create their own custom floating desktop widgets/windows from data and display them on screen, with prebuilt screens and a WYSIWYG editor for building windows with minimal technical knowledge.
+
 ## Commands
 
 - `npm run dev` — Vite dev server only (port 1420, fixed in `vite.config.ts`)
