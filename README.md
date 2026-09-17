@@ -119,4 +119,4 @@ See the [LICENSE](./LICENSE) file.
 
 ---
 
-<p align="center">Made by <b>KPZsProductions</b></p>
+<p align="center">Made by <b><a href="https://www.kpzsproductions.pl">KPZsProductions<a></b></p>
